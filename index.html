@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Centered Images</title>
+    <style>
+        /* إعدادات CSS لتوسيط الصور عمودياً */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 0vh;
+            margin: 0;
+            padding: 0 5vw;
+            background-color: black;
+        }
+
+        /* التنسيق الافتراضي للصور */
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* إضافة مسافة قبل الصورة الأولى */
+        .first-image {
+            margin-top: 10px; /* المسافة المطلوبة قبل الصورة الأولى */
+        }
+
+        /* الفاصل بين الصور */
+        .separator {
+            width: 100%;
+            height: 10px; /* ارتفاع الفاصل */
+            background-color: yellow; /* لون الفاصل */
+            margin: 5px 0; /* المسافة حول الفاصل */
+        }
+
+        /* التنسيق الخاص بالشاشات الصغيرة (الموبايل) */
+        @media (max-width: 768px) {
+            img {
+                width: 110%;
+                max-height: 50vh;
+            }
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px; /* المسافة بين الأزرار */
+            margin-top: 5px;
+        }
+
+        .contact-buttons.single {
+            margin-top: 5px;
+        }
+
+        .contact-buttons a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            width: auto;
+            justify-content: center;
+        }
+
+        .call-button, .whatsapp-button, .facebook-button {
+            background-color: #3b5998;
+        }
+
+        .contact-buttons img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="mu1.png" alt="Description of Image" class="first-image">
+
+    <!-- الفاصل الأصفر بين الصورتين -->
+    <div class="separator"></div>
+
+    <img src="mu2.png" alt="Description of Image" class="second-image">
+
+    <div class="contact-buttons">
+        <a href="tel:035172350" class="call-button">
+            <img src="phone-icon.png" alt="Call Icon">
+            للاتصال
+        </a>
+        <a href="https://wa.me/201044616863" class="whatsapp-button">
+            <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+            الواتس
+        </a>
+    </div>
+
+    <div class="contact-buttons single">
+        <a href="https://www.facebook.com/SyrianChickenHouse?mibextid=ZbWKwL" class="facebook-button">
+            <img src="facebook-icon.png" alt="Facebook Icon">
+            فيسبوك
+        </a>
+    </div>
+
+</body>
+</html>
